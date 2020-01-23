@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CafeOder</string>
+    <string name="hint">Enter client name here</string>
+    <string name="wellcome">Wellcome!!!!</string>
+    <string name="send_oder">Send oder</string>
+    <string name="message">Enter client name</string>
+    <string name="mesg">Enter client name</string>
+</resources>
