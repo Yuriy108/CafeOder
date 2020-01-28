@@ -5,4 +5,23 @@
     <string name="send_oder">Send oder</string>
     <string name="message">Enter client name</string>
     <string name="mesg">Enter client name</string>
+    <string name="choose_sups">Choose sups</string>
+    <string name="chooose_salat">Chooose salat</string>
+    <string name="Tea">Tea</string>
+    <string name="coffe">coffe</string>
+    <string-array name="sup">
+        <item>Borch</item>
+        <item>Solyanka</item>
+        <item>Harcho</item>
+    </string-array>
+    <string-array name="Tea">
+        <item>Black</item>
+        <item>Green</item>
+        <item>Origin</item>
+    </string-array>
+    <string-array name="Coffe">
+        <item>expresso</item>
+        <item>americano</item>
+        <item>late</item>
+    </string-array>
 </resources>

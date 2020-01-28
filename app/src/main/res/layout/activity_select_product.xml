@@ -1,9 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SelectProduct">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lite"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textViewSup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="@color/dark"
+            android:text="@string/choose_sups" />
+
+        <Spinner
+            android:id="@+id/spinnerSup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/sup"
+            android:textColor="@color/white"
+            android:background="@color/dark"
+            />
+        <TextView
+            android:id="@+id/textViewSalat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="@color/dark"
+            android:text="@string/chooose_salat" />
+
+        <CheckBox
+            android:id="@+id/checkGreeck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Greek"
+            android:textColor="@color/dark"
+            android:textSize="25dp"
+            android:checked="true"
+            />
+
+        <CheckBox
+            android:id="@+id/checkLeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark"
+            android:textSize="25dp"
+            android:text="Leto" />
+
+        <CheckBox
+            android:id="@+id/checkZima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark"
+            android:textSize="25dp"
+
+            android:text="Zima" />
+
+        <CheckBox
+            android:id="@+id/checkSpring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark"
+            android:textSize="25dp"
+            android:text="Spring" />
+
+        <CheckBox
+            android:id="@+id/checkOlivie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark"
+            android:textSize="25dp"
+            android:text="Olivie" />
+    <TextView
+        android:id="@+id/textViewDrinks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/dark"
+        android:text="Choose drink" />
+    <RadioGroup
+        android:id="@+id/drinks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_margin="8dp"
+            android:id="@+id/radiobtcoffe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Caffe"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:checked="true"
+            android:onClick="chooseDrink"/>
+        <RadioButton
+            android:layout_margin="8dp"
+            android:id="@+id/radiobttea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Tea"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:onClick="chooseDrink"/>
+    </RadioGroup>
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/teaList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/Tea"
+        android:textAlignment="center"
+        android:visibility="visible"/>
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/coffeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/Coffe"
+        android:textAlignment="center"
+        android:visibility="invisible"/>
+    <Button
+        android:id="@+id/buttonOder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Confirm the oder"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/middle"
+        android:layout_margin="30dp"
+        />
+
+
+
+    </LinearLayout>
