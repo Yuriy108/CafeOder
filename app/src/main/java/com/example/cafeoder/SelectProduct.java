@@ -22,6 +22,7 @@ public class SelectProduct extends AppCompatActivity {
     private Spinner spinnerCoffe;
     private String nameDrinks;
     private String clientName;
+    private StringBuilder chooseSalat;
 
 
     @Override
@@ -39,6 +40,7 @@ public class SelectProduct extends AppCompatActivity {
         spinnerTea=findViewById(R.id.teaList);
         Intent intent=getIntent();
         clientName=intent.getStringExtra("name");
+        chooseSalat=new StringBuilder();
 
     }
 
@@ -57,6 +59,36 @@ public class SelectProduct extends AppCompatActivity {
 
         }
 
+
+    }
+
+    public void confirmTheOder(View view) {
+        chooseSalat.setLength(0);
+        if(selectGreek.isChecked()){
+            chooseSalat.append("Greek salat ");
+        }
+        if(selectLeto.isChecked()){
+            chooseSalat.append("Leto salat ");
+        }
+        if(selectZima.isChecked()){
+            chooseSalat.append("Zima salat ");
+        }
+        if(selectSpring.isChecked()){
+            chooseSalat.append("Spring salat ");
+        }
+        if(selectOlivie.isChecked()){
+            chooseSalat.append("Olivie salat ");
+        }
+        String typeOfSup=spinnerSup.getSelectedItem().toString();
+        String typeOf_Drink;
+        if(nameDrinks.equals("Coffe")){
+            typeOf_Drink=spinnerCoffe.getSelectedItem().toString();
+        }else
+            {typeOf_Drink=spinnerTea.getSelectedItem().toString();}
+        String confirmOder=String.format("Name of client %s\nName of sup %s \nKind of salat %s\nName of drink %s  %s",clientName,typeOfSup,chooseSalat.toString(),nameDrinks,typeOf_Drink);
+        Intent intent= new Intent(this,FullOder.class);
+        intent.putExtra("oder",confirmOder);
+        startActivity(intent);
 
     }
 }

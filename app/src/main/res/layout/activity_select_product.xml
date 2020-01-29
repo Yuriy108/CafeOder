@@ -139,6 +139,7 @@
         android:textColor="@color/white"
         android:background="@color/middle"
         android:layout_margin="30dp"
+        android:onClick="confirmTheOder"
         />
 
 
